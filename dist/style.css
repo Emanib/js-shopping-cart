@@ -43,7 +43,7 @@
 {
 color:#aaaa; 
 }
-.fas fa-shopping-cart
+#icon
 {
     margin-left:0 1rem; 
 }
@@ -65,6 +65,22 @@ color:#aaaa;
        width:200px;
    
 
+}
+.cart-item
+{
+background-color:pink;
+  padding: 0 5rem; 
+}
+.cart-list
+{
+    padding: 0 2rem; 
+    
+}
+.cart-item-info
+{
+    display:flex; 
+    
+    border-bottom : 1px solid #000; 
 }
 .cart-container
 {

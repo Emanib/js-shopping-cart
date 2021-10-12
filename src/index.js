@@ -52,7 +52,7 @@ function loadJSON(){
                         <span class = "product-category">${product.description}</span>
                         <p class = "product-price">$${product.price}</p>
                         <button type = "button" class = "add-to-cart-btn">
-                            <i class = "fas fa-shopping-cart"></i>Add To Cart
+                            <i class = "fas fa-shopping-cart" id ="icon"></i>Add To Cart
                         </button>
                     </div>
                 </div>
@@ -90,20 +90,23 @@ function getProductInfo(product){
 }
 
 // add the selected product to the cart list
-function addToCartList(product){
+function addToCartList(product)
+{
+    let cartInfo = findCartInfo();
+    cartCountInfo.textContent = cartInfo.productCount;
+
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     cartItem.setAttribute('data-id', `${product.id}`);
     cartItem.innerHTML = `
-        <img src = "${product.imgSrc}" alt = "product image">
+   
         <div class = "cart-item-info">
-            <h3 class = "cart-item-name">${product.name}</h3>
-            <span class = "cart-item-category">${product.category}</span>
-            <span class = "cart-item-price">${product.price}</span>
-        </div>
+          <h3>  product  </h3>
+            <div class = "cart-item-price">${product.price}</div>
         <button type = "button" class = "cart-item-del-btn">
             <i class = "fas fa-times"></i>
         </button>
+          </div>
     `;
     cartList.appendChild(cartItem);
 }
