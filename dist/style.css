@@ -1,0 +1,76 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+.products 
+{
+    padding: 6rem 0; 
+}
+.products h2 
+{
+     text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+.product-item
+{
+    /* background-color: pink; */
+    border :1px solid #E8E8E8; 
+      margin: 1rem 0;
+      border-radius: 5px;
+      display:flex; 
+      padding: 2rem 0; 
+        gap:2rem; 
+}
+.product-price
+{
+    color:green;
+    font-size:1em; 
+}
+.product-content
+{
+    margin: 0 2rem; 
+    display:flex; 
+    flex-direction: column;
+    gap:2rem; 
+}
+.product-category
+{
+color:#aaaa; 
+}
+.fas fa-shopping-cart
+{
+    margin-left:0 1rem; 
+}
+.add-to-cart-btn
+{
+    /* border:none;  */
+  padding: 14px 28px;
+    border-color: #2196F3;
+    color:#2196F3;
+    background-color:white; 
+    width: 150px;
+
+}
+
+.product-img img
+{
+    
+   height: 200px;
+       width:200px;
+   
+
+}
+.cart-container
+{
+    display:none; 
+}
+.show-cart-container
+{
+    display:block; 
+}

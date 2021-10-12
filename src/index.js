@@ -13,15 +13,12 @@ function eventListeners(){
         loadJSON();
         loadCart();
     });
-    // toggle navbar when toggle button is clicked
-    // document.querySelector('.navbar-toggler').addEventListener('click', () => {
-    //     document.querySelector('.navbar-collapse').classList.toggle('show-navbar');
-    // });
+   
 
-    // show/hide cart container
-    // document.getElementById('cart-btn').addEventListener('click', () => {
-    //     cartContainer.classList.toggle('show-cart-container');
-    // });
+ document.getElementById('cart-btn').addEventListener('click', () =>
+    {
+        cartContainer.classList.toggle('show-cart-container')
+    })
 
     // add to cart
     productList.addEventListener('click', purchaseProduct);
@@ -47,15 +44,16 @@ function loadJSON(){
             html += `
                 <div class = "product-item">
                     <div class = "product-img">
-                        <img src = "${product.image}" alt = "product image" style = width:"70px">
-                        <button type = "button" class = "add-to-cart-btn">
-                            <i class = "fas fa-shopping-cart"></i>Add To Cart
-                        </button>
+                        <img src = "${product.image}" alt = "product image">
+                        
                     </div>
                     <div class = "product-content">
                         <h3 class = "product-name">${product.title}</h3>
                         <span class = "product-category">${product.description}</span>
                         <p class = "product-price">$${product.price}</p>
+                        <button type = "button" class = "add-to-cart-btn">
+                            <i class = "fas fa-shopping-cart"></i>Add To Cart
+                        </button>
                     </div>
                 </div>
             `;
